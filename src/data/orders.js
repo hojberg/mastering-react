@@ -32,7 +32,7 @@ const ORDERS_DATA = [
       { name: 'Purple Shorts', amount: 5.50 }
     ],
     amount: 5.50,
-    paymentStatus: 'authorized',
+    paymentStatus: 'settled',
     orderStatus: 'open'
   },
   {
@@ -44,8 +44,8 @@ const ORDERS_DATA = [
       { name: 'Brown Trenchcoat', amount: 250.50 }
     ],
     amount: 316.00,
-    paymentStatus: 'authorized',
-    orderStatus: 'open'
+    paymentStatus: 'settled',
+    orderStatus: 'shipped'
   }
 ];
 
