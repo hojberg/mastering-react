@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "browserify src/main.js -t babelify --outfile public/bundle.js"
+    "build": "browserify src/main.js -t babelify --outfile public/bundle.js && node-sass --output-style compressed styles/main.scss public/main.css"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
     "react": "^0.13.3"
   },
   "devDependencies": {
-    "babelify": "^6.1.2"
+    "babelify": "^6.1.2",
+    "node-sass": "^3.2.0"
   }
 }

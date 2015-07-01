@@ -1,0 +1,28 @@
+.main-header {
+  position: relative;
+  height: 58px;
+  background: $grey-100;
+  color: $grey-40;
+
+  .logo {
+    position: absolute;
+    top: 21px;
+    left: 40px;
+    font-size: 16px;
+  }
+
+  .main-nav {
+    position: absolute;
+    top: 22px;
+    right: 40px;
+    font-size: 14px;
+
+    a {
+      margin-left: 55px;
+    }
+
+    .current {
+      color: $orange-80;
+    }
+  }
+}
