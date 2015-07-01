@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/hojberg/mastering-react",
   "dependencies": {
+    "moment": "^2.10.3",
+    "numeral": "^1.5.3",
     "react": "^0.13.3"
   },
   "devDependencies": {
