@@ -16,6 +16,15 @@ h1 {
   font-size: 20px;
 }
 
+a {
+  cursor: pointer;
+  color: $blue-100;
+
+  &:hover {
+    color: $blue-150;
+  }
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
