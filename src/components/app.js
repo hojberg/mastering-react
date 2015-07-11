@@ -1,6 +1,7 @@
 import React from 'react';
 import MainHeader from './main_header';
 import Page from './page';
+import Orders from './orders';
 
 class App extends React.Component {
   render() {
@@ -8,7 +9,7 @@ class App extends React.Component {
       <div className='app'>
         <MainHeader />
         <Page>
-          <h1>Page title</h1>
+          <Orders />
         </Page>
       </div>
     );

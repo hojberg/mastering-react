@@ -1,0 +1,38 @@
+.orders {
+  .page-header {
+    h1 {
+      float: left;
+    }
+
+    .status-nav {
+      margin-left: 80px;
+
+      a {
+        padding: 0 10px;
+        color: $grey-40;
+        font-size: 12px;
+        line-height: 24px;
+        vertical-align: -6px;
+        display: inline-block;
+
+        &:hover {
+          color: $orange-80;
+        }
+      }
+
+      .selected {
+        color: $orange-100;
+      }
+    }
+  }
+
+  .orders-table {
+    .amount {
+      text-align: right;
+    }
+
+    .status {
+      text-align: center;
+    }
+  }
+}

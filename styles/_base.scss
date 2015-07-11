@@ -15,3 +15,42 @@ h1, h2, h3, h4, h5 {
 h1 {
   font-size: 20px;
 }
+
+a {
+  cursor: pointer;
+  color: $blue-100;
+
+  &:hover {
+    color: $blue-150;
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  text-align: left;
+  padding: 10px 60px 10px 10px;
+  border-bottom: 1px solid $grey-10;
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &:last-child {
+    padding-right: 0;
+  }
+}
+
+th {
+  font-weight: $regular;
+  color: $grey-40;
+}
+
+th.sorted-by {
+  color: $grey-60;
+  border-bottom: 1px solid $orange-100;
+}
