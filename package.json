@@ -4,7 +4,7 @@
   "description": "Mastering React video course",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "clear && ./node_modules/mocha/bin/mocha --compilers js:babel/register --reporter dot test/**/*_test.js",
     "build": "browserify src/main.js -t babelify --outfile public/bundle.js && node-sass --output-style compressed styles/main.scss public/main.css"
   },
   "repository": {
@@ -24,7 +24,10 @@
     "react-dom": "^0.14.0-beta1"
   },
   "devDependencies": {
+    "babel": "^5.6.14",
     "babelify": "^6.1.2",
+    "expect.js": "^0.3.1",
+    "mocha": "^2.2.5",
     "node-sass": "^3.2.0"
   }
 }
