@@ -1,0 +1,9 @@
+[ignore]
+.*/node_modules/node-sass/.*
+.*/src/.*
+
+[include]
+
+[libs]
+
+[options]
