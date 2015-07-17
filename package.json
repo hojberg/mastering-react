@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "clear && ./node_modules/mocha/bin/mocha --compilers js:babel/register --reporter dot --recursive",
-    "build": "browserify src/main.js -t babelify --outfile public/bundle.js && node-sass --output-style compressed styles/main.scss public/main.css"
+    "build": "browserify src/main.js -t babelify --outfile public/bundle.js && node-sass --output-style compressed styles/main.scss public/main.css",
+    "flow": "babel src --out-dir build_flow --blacklist flow && flow build_flow"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,7 @@
   },
   "devDependencies": {
     "babel": "^5.6.14",
+    "babel-plugin-flow-comments": "^1.0.4",
     "babelify": "^6.1.2",
     "expect.js": "^0.3.1",
     "jsdom": "^3.1.2",
