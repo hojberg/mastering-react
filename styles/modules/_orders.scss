@@ -5,7 +5,8 @@
     }
 
     .status-nav {
-      margin-left: 80px;
+      margin-left: 21px;
+      float: left;
 
       a {
         padding: 0 10px;
@@ -22,6 +23,25 @@
 
       .selected {
         color: $orange-100;
+      }
+    }
+
+    .amount-filter {
+      margin-top: 2px;
+      margin-left: 10px;
+      padding-left: 20px;
+      border-left: 1px solid $grey-20;
+      float: left;
+
+      input {
+        padding: 4px 6px;
+        border-radius: 2px;
+        border: 1px solid $grey-40;
+
+        &:focus {
+          border: 1px solid $blue-100;
+          outline: 0;
+        }
       }
     }
   }
