@@ -84,6 +84,10 @@ class Orders extends React.Component {
     );
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    return this.state !== nextState;
+  }
+
   handleAmountFilterChange(ev) {
     OrdersActions.updateAmountFilter(ev.currentTarget.value || null);
   }

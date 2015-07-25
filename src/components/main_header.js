@@ -10,6 +10,10 @@ class MainHeader extends React.Component {
       </div>
     );
   }
+
+  shouldComponentUpdate() {
+    return false;
+  }
 }
 
 export default MainHeader;
