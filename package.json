@@ -25,7 +25,8 @@
     "moment": "^2.10.3",
     "numeral": "^1.5.3",
     "react": "^0.14.0-beta1",
-    "react-dom": "^0.14.0-beta1"
+    "react-dom": "^0.14.0-beta1",
+    "react-router": "^1.0.0-beta3"
   },
   "devDependencies": {
     "babel": "^5.6.14",
