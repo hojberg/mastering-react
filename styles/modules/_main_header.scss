@@ -20,9 +20,10 @@
     a {
       margin-left: 55px;
       color: $grey-40;
+      text-decoration: none;
     }
 
-    .current {
+    .active {
       color: $orange-80;
     }
   }
