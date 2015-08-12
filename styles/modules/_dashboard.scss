@@ -1,0 +1,41 @@
+.dashboard {
+  h1 {
+    margin-bottom: 40px;
+  }
+
+  .sales-chart {
+    padding: 20px 40px;
+    margin: 0 -40px;
+    background: $grey-10;
+
+    .chart-wrapper {
+      margin: auto;
+    }
+
+    .line {
+      stroke: $orange-100;
+      stroke-width: 4px;
+      fill: none;
+    }
+
+    .axis {
+      stroke: $grey-40;
+      stroke-width: 2px;
+      opacity: 0.5;
+    }
+
+    .ticks {
+      text-transform: uppercase;
+    }
+
+    .y.ticks {
+      text-anchor: end;
+    }
+
+    .tick {
+      font-size: 11px;
+      fill: $grey-100;
+      opacity: .2;
+    }
+  }
+}

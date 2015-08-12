@@ -30,7 +30,7 @@ class OrdersStore {
   }
 
   handleFetchOrders() {
-    this.orders = [];
+    this.orders = Immutable.List();
   }
 }
 

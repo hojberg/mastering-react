@@ -20,6 +20,10 @@ app.get('/orders.json', (req, res) => {
   res.sendFile(__dirname + '/data/orders.json');
 });
 
+app.get('/sales_stats.json', (req, res) => {
+  res.sendFile(__dirname + '/data/sales_stats.json');
+});
+
 const server = app.listen(8000, () => {
   const host = server.address().address;
   const port = server.address().port;

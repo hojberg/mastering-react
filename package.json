@@ -20,13 +20,15 @@
   "homepage": "https://github.com/hojberg/mastering-react",
   "dependencies": {
     "alt": "^0.17.1",
+    "d3": "^3.5.6",
     "express": "^4.13.1",
     "immutable": "^3.7.4",
     "moment": "^2.10.3",
     "numeral": "^1.5.3",
     "react": "^0.14.0-beta1",
     "react-dom": "^0.14.0-beta1",
-    "react-router": "^1.0.0-beta3"
+    "react-router": "^1.0.0-beta3",
+    "underscore": "^1.8.3"
   },
   "devDependencies": {
     "babel": "^5.6.14",
