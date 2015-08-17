@@ -5,7 +5,9 @@ import DashboardActions from '../actions/dashboard_actions';
 
 class DashboardStore {
   constructor() {
-    this.salesStats = Immutable.List();
+    this.state = Immutable.fromJS({
+      salesStats: []
+    });
 
     this.bindListeners({
       handleUpdateSalesStats: DashboardActions.UPDATE_SALES_STATS,
@@ -14,12 +16,12 @@ class DashboardStore {
   }
 
   handleUpdateSalesStats(salesStats) {
-    this.salesStats = salesStats;
+    this.setState(this.state.setIn(['salesStates', salesStates]));
   }
 
   handleFetchSalesStats() {
-    this.salesStats = Immutable.List();
+    this.setState(this.state.setIn(['salesStates', Immutable.List()]));
   }
 }
 
-export default alt.createStore(immutableUtil(DashboardStore));
+export default alt.createStore(immutableUtil(DashboardStore), 'DashboardStore');

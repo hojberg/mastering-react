@@ -15,7 +15,6 @@ class OrdersActions {
   }
 
   fetchOrders() {
-    this.dispatch([]);
     OrdersFetcher.fetch()
       .then(this.actions.updateOrders.bind(this));
   }
