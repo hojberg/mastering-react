@@ -1,37 +1,48 @@
 import alt from '../alt';
-import immutableUtil from 'alt/utils/ImmutableUtil';
 import Immutable from 'immutable';
 import OrdersActions from '../actions/orders_actions';
+import parseOrders from '../utils/parse_orders';
 
 class OrdersStore {
   constructor() {
-    this.orders = Immutable.List();
-    this.selectedStatus = 'all';
-    this.amountFilter = null;
+    this.state = {
+      orders: Immutable.List(),
+      selectedStatus: 'all',
+      amountFilter: null
+    }
 
     this.bindListeners({
       handleUpdateOrders: OrdersActions.UPDATE_ORDERS,
       handleUpdateSelectedStatus: OrdersActions.UPDATE_SELECTED_STATUS,
       handleUpdateAmountFilter: OrdersActions.UPDATE_AMOUNT_FILTER,
-      handleFetchOrders: OrdersActions.FETCH_ORDERS
     });
   }
 
   handleUpdateOrders(orders) {
-    this.orders = orders;
+    this.setState({ orders: orders });
   }
 
   handleUpdateAmountFilter(amount) {
-    this.amountFilter = amount;
+    this.setState({ amountFilter: amount });
   }
 
   handleUpdateSelectedStatus(status) {
-    this.selectedStatus = status;
-  }
-
-  handleFetchOrders() {
-    this.orders = Immutable.List();
+    this.setState({ selectedStatus: status });
   }
 }
 
-export default alt.createStore(immutableUtil(OrdersStore));
+OrdersStore.config = {
+  onDeserialize: function (data) {
+    const nextState = Object.assign(
+      {},
+      data,
+      {
+        orders: Immutable.fromJS(parseOrders(data.orders))
+      }
+    );
+
+    return nextState;
+  }
+};
+
+export default alt.createStore(OrdersStore, 'OrdersStore');
