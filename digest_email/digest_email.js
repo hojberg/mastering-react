@@ -1,4 +1,5 @@
 import React from 'react';
+import SalesSparkline from './sales_sparkline';
 
 class DigestEmail extends React.Component {
   render() {
@@ -6,6 +7,7 @@ class DigestEmail extends React.Component {
       <html>
         <body>
           <h1>Storekeeper Digest Email</h1>
+          <SalesSparkline salesStats={this.props.salesStats} />
         </body>
       </html>
     );
