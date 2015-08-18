@@ -6,6 +6,11 @@
     "start": "node_modules/react-native/packager/packager.sh"
   },
   "dependencies": {
-    "react-native": "^0.9.0"
+    "alt": "^0.17.1",
+    "immutable": "^3.7.4",
+    "moment": "^2.10.6",
+    "numeral": "^1.5.3",
+    "react-native": "^0.9.0",
+    "underscore": "^1.8.3"
   }
 }
