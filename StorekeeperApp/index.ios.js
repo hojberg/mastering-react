@@ -1,10 +1,5 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- */
-'use strict';
-
 var React = require('react-native');
+var LatestOrders = require('./src/components/latest_orders');
 var {
   AppRegistry,
   StyleSheet,
@@ -19,6 +14,7 @@ var StorekeeperApp = React.createClass({
         <Text style={styles.welcome}>
           Storekeeper
         </Text>
+        <LatestOrders />
       </View>
     );
   }

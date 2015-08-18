@@ -13,9 +13,7 @@ app.use(express.static('public'));
 
 // Data endpoints
 app.get('/orders.json', (req, res) => {
-  setTimeout(() => {
-    res.sendFile(__dirname + '/data/orders.json');
-  }, 2000);
+  res.sendFile(__dirname + '/data/orders.json');
 });
 
 app.get('/sales_stats.json', (req, res) => {
