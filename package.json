@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/hojberg/mastering-react",
   "dependencies": {
-    "react": "^0.13.3"
+    "react": "^0.14.0-beta1",
+    "react-dom": "^0.14.0-beta1"
   },
   "devDependencies": {
     "babelify": "^6.1.2"
