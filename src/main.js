@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 
 class Header extends React.Component {
   render() {
@@ -63,4 +64,4 @@ class App extends React.Component {
   }
 }
 
-React.render(<App />, document.querySelector('#app'));
+ReactDOM.render(<App />, document.querySelector('#app'));
