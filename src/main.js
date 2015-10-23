@@ -24,7 +24,7 @@ class Greeter extends React.Component {
   }
 
   handleGreet() {
-    this.setState({ name: this.refs.name.getDOMNode().value });
+    this.setState({ name: this.refs.name.value });
   }
 
   componentWillMount() {
