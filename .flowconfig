@@ -1,5 +1,7 @@
 [ignore]
 .*/node_modules/node-sass/.*
+.*/node_modules/fbjs.*
+.*/node_modules/npmconf.*
 .*/src/.*
 
 [include]
