@@ -3,9 +3,6 @@ import sinon from 'sinon';
 import expect from 'expect.js';
 import Orders from '../../src/components/orders';
 import OrdersTable from '../../src/components/orders/orders_table';
-import { setupFakeDOM } from '../test_helper';
-
-setupFakeDOM();
 
 const TestUtils = React.addons.TestUtils;
 
