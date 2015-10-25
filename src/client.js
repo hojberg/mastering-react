@@ -3,8 +3,10 @@ require("babel/polyfill");
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router } from 'react-router';
-import { history } from 'react-router/lib/BrowserHistory';
+import { createHistory } from 'history';
 import routes from './routes';
+
+let history = createHistory();
 
 ReactDOM.render((
   <Router history={history}>
