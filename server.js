@@ -1,7 +1,6 @@
 import express from 'express';
 import fs from 'fs';
-import { Router } from 'react-router';
-import Location from 'react-router/lib/location';
+import { match, RoutingContext } from 'react-router'
 import routes from './src/routes';
 import ReactDOMServer from 'react-dom/server';
 import React from 'react';
@@ -20,8 +19,8 @@ app.get('/sales_stats.json', (req, res) => {
 
 // Render UI
 app.use((req, res, next) => {
-  Router.run(routes, new Location(req.url), (error, props) => {
-    const content = ReactDOMServer.renderToString(<Router {...props} />);
+  match({ routes, location: req.url }, (error, redirectLocation, renderProps) => {
+    const content = ReactDOMServer.renderToString(<RoutingContext {...renderProps} />);
     res.render('index.ejs', { html: content });
   });
 });
